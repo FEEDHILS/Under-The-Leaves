@@ -5,15 +5,11 @@ using UnityEngine;
 public class RotationCheck : MonoBehaviour
 {
     public Transform target;
-    public int value = 0;
 
-    void Update()
+    public int Check()
     {
-        Check();
-    }
+        int value = 1;
 
-    void Check()
-    {
         if(target.right == Vector3.right)
         {
             value = 1;
@@ -23,7 +19,7 @@ public class RotationCheck : MonoBehaviour
             value = -1;
         }
 
-        
+        return value;
         
     }
 }

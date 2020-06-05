@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
+    Vector3 rotation = new Vector3();
     void Start()
     {
-        
+        rotation = transform.eulerAngles;
     }
 
     
@@ -14,8 +15,7 @@ public class LookAtMouse : MonoBehaviour
     {
         Vector3 dir = VecMousePoint.vector - transform.position;
 
-        transform.eulerAngles = new Vector3(0, 0, MathThing(dir.normalized));
-        
+        transform.eulerAngles = new Vector3(0 , rotation.y, MathThing(dir.normalized));
     }
 
     float MathThing(Vector2 _vec)

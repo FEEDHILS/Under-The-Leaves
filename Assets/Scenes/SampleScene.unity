@@ -3814,9 +3814,10 @@ GameObject:
   m_Component:
   - component: {fileID: 473281777}
   - component: {fileID: 473281778}
+  - component: {fileID: 473281779}
   m_Layer: 0
   m_Name: Graphic
-  m_TagString: Untagged
+  m_TagString: PlyGraphics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3884,6 +3885,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &473281779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473281776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366ae879475b44542bdb11cd1fc897f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &476698377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4842,7 +4855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711489448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0, y: -0.144, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1963291317}
@@ -4962,6 +4975,7 @@ GameObject:
   - component: {fileID: 1067149172}
   - component: {fileID: 1067149169}
   - component: {fileID: 1067149171}
+  - component: {fileID: 1067149174}
   m_Layer: 9
   m_Name: Pistol
   m_TagString: Untagged
@@ -4976,7 +4990,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067149167}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.24, y: -3.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
@@ -5024,7 +5038,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1067149174}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -5062,7 +5076,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1067149174}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -5153,6 +5167,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1067149174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067149167}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b1c417d3fcf8a4f9cb3e7a1f9d915e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &1133019576
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,7 +5357,6 @@ GameObject:
   - component: {fileID: 1167052723}
   - component: {fileID: 1167052724}
   - component: {fileID: 1167052725}
-  - component: {fileID: 1167052726}
   - component: {fileID: 1167052728}
   m_Layer: 10
   m_Name: Character
@@ -5388,18 +5414,6 @@ MonoBehaviour:
   JumpStrength: 4.57
   rb: {fileID: 1167052723}
   CanJump: 0
---- !u!114 &1167052726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167052722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366ae879475b44542bdb11cd1fc897f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1167052727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5483,13 +5497,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171167121}
-  m_LocalRotation: {x: -0, y: -0, z: -0.023433855, w: 0.9997254}
-  m_LocalPosition: {x: 22.627, y: -0.546, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.03107356, w: 0.9995171}
+  m_LocalPosition: {x: 28.46, y: -4.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1133019577}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.686}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.561}
 --- !u!212 &1171167123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8437,7 +8451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963291316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.302, y: 0, z: 0}
+  m_LocalPosition: {x: 0.466, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 711489449}
