@@ -5,8 +5,10 @@ using UnityEngine;
 public class Flip : MonoBehaviour
 {
     Vector3 _right;
+    Vector2 _up;
     void Start()
     {
+        _up = new Vector2(transform.up.x, transform.up.y);
         _right = transform.right;
     }
 
@@ -24,11 +26,11 @@ public class Flip : MonoBehaviour
 
         if(mousePos.x > value.x)
         {
-            transform.right = _right;
+            transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
         }
         else if(mousePos.x < value.x)
         {
-            transform.right = -_right;
+            transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
         }
     }
 }

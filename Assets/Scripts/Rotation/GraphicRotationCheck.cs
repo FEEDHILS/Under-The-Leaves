@@ -13,10 +13,9 @@ public class GraphicRotationCheck : MonoBehaviour
 
     void Update()
     {
-        SpriteRenderer sp = GetComponent<SpriteRenderer>();
         
-        bool value = check.value == 1 ? false : true;
+        int value = check.value == 1 ? 0 : 180;
 
-        sp.flipY = value;
+        transform.eulerAngles = new Vector3(value, 0, 0);
     }
 }
