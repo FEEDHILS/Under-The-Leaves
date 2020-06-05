@@ -31,7 +31,7 @@ public class Equip : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetButtonDown("Equip") && Vector3.Distance(transform.position, Player.position ) <= MaxDist)
+        if(Input.GetButtonDown("Use") && Vector3.Distance(transform.position, Player.position ) <= MaxDist)
         {
             states.Set("Equiped");
             CheckState();
