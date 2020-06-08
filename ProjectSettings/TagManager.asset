@@ -8,6 +8,7 @@ TagManager:
   - GunPivot
   - EC_Point
   - PlyGraphics
+  - Inventory
   layers:
   - Default
   - TransparentFX

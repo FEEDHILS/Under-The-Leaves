@@ -19,12 +19,9 @@ public class Shooting : MonoBehaviour
     
     void Update()
     {
-        if(states.Get() == "Equiped")
+        if(Input.GetMouseButtonDown(0) && CanShoot)
         {
-            if(Input.GetMouseButtonDown(0) && CanShoot)
-            {
                 StartCoroutine("Shoot");
-            }
         }
     }
 

@@ -5,37 +5,35 @@ using UnityEngine.Events;
 
 public class ChestLoot : MonoBehaviour
 {
-    [SerializeField] List<GameObject> Loot = new List<GameObject>();
+    [SerializeField] GameObject LootBlank;
+    [SerializeField] List<LootObject> Loot = new List<LootObject>();
     [SerializeField] float forceStrength = 2.5f;
     [SerializeField] int angleScatter = 45;
 
     [SerializeField] UnityEvent OnAllLootDroped = new UnityEvent();
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
+    [SerializeField] bool CanDropLoot = true;
 
     public void ThrowLoot()
     {
+        if(!CanDropLoot)
+            return;
+        
+
         Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + 0.8f);
 
-        foreach(GameObject lootObject in Loot)
+        foreach(LootObject lootObject in Loot)
         {
             int randomAngle =  Random.Range(-(angleScatter / 2), angleScatter / 2);
             Quaternion rotation = Quaternion.AngleAxis(randomAngle, Vector3.forward);
 
-            GameObject currentLoot = Instantiate(lootObject, spawnPosition, rotation) as GameObject;
+            GameObject currentLoot = Instantiate(LootBlank, spawnPosition, rotation) as GameObject;
 
+            currentLoot.GetComponent<Loot>().Settings = lootObject;
             currentLoot.GetComponent<Rigidbody2D>()?.AddForce(currentLoot.transform.up * forceStrength, ForceMode2D.Impulse);
         }
-
+        
+        CanDropLoot = false;
         OnAllLootDroped.Invoke();
     }
 }
