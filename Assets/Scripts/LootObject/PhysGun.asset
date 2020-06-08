@@ -15,4 +15,5 @@ MonoBehaviour:
   Sprite: {fileID: -4832327027614196474, guid: 7ce9e2df42ea49241a2278b1b5ca4a56, type: 3}
   LootName: Physic Gun
   CanHold: 1
-  Instance: {fileID: 0}
+  Instance: {fileID: 4303565026479813274, guid: d1bdedffb622fd2488e203339f2fca8d,
+    type: 3}
